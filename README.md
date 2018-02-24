@@ -16,9 +16,10 @@ BalancerMember http://10.66.1.3:8000 ROUTE=3
 
 (Note: the `ROUTE=<someid>` is needed for sticky session.)
 
-Then start up the container with the `app.conf` mounted:
+Then build the image and start up the container with the `app.conf` mounted:
 
 ```
+docker build . -t apache-lb
 docker run --name apache-lb --rm -dit -p 8080:80 -v /YOUR/PATH/app.conf:/usr/local/apache2/conf/extra/app.conf apache-lb
 ```
 
