@@ -23,3 +23,4 @@ docker build . -t apache-lb
 docker run --name apache-lb --rm -dit -p 8080:80 -v /YOUR/PATH/app.conf:/usr/local/apache2/conf/extra/app.conf apache-lb
 ```
 
+(Note: you can go to the `/_balancer-manager` to view the balancer manager page)
